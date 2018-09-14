@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>编程常用工具</title>
+</head>
+<body>
+当前时间戳(5秒刷新一次,可手动刷新):<span id="stamp"></span><button onclick="setStamp()">刷新</button>
+</body>
+<script type="text/javascript">
+
+const getStamp = () => (new Date()).valueOf()
+
+const setStamp = () => {
+    document.getElementById('stamp').innerHTML = getStamp()
+}
+
+setStamp()
+
+setInterval(setStamp, 5000)
+
+</script>
+</html>
